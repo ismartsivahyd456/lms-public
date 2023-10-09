@@ -28,7 +28,10 @@ pipeline {
                   sh 'docker push ismarsivahyd/frontend-lms'
             }
         }
-        
+        stage('Remove old docker images') {
+             steps {
+                 sh 'docker rmi -f ismartsivahyd/frontend-lms'
+            }
         }
          stage('Running the docker container') {
             steps {
