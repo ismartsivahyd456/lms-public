@@ -25,7 +25,7 @@ pipeline {
         }
         stage('pushing the docker image into dockerhub') {
             steps {
-                  sh 'docker push ismarsivahyd/frontend-lms'
+                  sh 'docker push ismartsivahyd/frontend-lms'
             }
         }
         stage('Remove old docker images') {
